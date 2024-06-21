@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(33, 33, 33);
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+#name{
+    /*border: 2px solid red;              /* */
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+
+
+#input{
+    /*border: 2px solid red;              /* */
+    display: grid;
+    justify-content: center;
+}
+
+#input_h{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    text-align: center;
+    color: white;
+}
+
+#topic{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    display: grid;
+    justify-content: center;
+}
+#topic_input{
+    width: 600px;
+    height: 20px;
+    border: 2px solid rgb(159, 159, 159) ;
+    border-radius: 20px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+#control{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    color: white;
+    width: 70vw;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.inp{
+    border: 2px solid rgb(159, 159, 159) ;
+    background-color: rgb(33, 33, 33);
+    border-radius: 20px;
+    width: 30px;
+    color: white;
+}
+#chap,#nos,#depth{
+    text-align: center;
+}
+#submit{
+    /*border: 2px solid rgb(255, 255, 255);               */
+    display: grid;
+    width: 70vw;
+    height: 30px;
+    justify-content: center;
+
+}
+button{
+    color: white;
+}

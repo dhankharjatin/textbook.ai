@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='book_css.css')}}">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        
+        <div id="left">
+            <form action="{{ url_for('home') }}" method="post">
+                <input type="submit" value="New Book">
+            </form>
+        </div>
+        
+        
+        <div id="right">
+            <div id="name"><h1>{{name}}</h1></div>
+            <div id="index"><h2>Index</h2></div>
+
+            {% for chapter in chap_list %}
+                <strong>{{chapter}}</strong><br>
+
+                {% set temp = subtopic_list[loop.index0] %}      
+                {% for sub in temp %}
+                    <p></p>&nbsp;&nbsp;&nbsp;&nbsp;{{sub}}</p>
+                {% endfor %}          
+
+            {% endfor %}
+            
+
+            {% for chapter in chap_list %}
+                <div id="heading"><h1>{{chapter}}</h1><br></div>
+
+                {% set first = wwwl[loop.index0] %}
+                {% set b=first.split("\n\n") %}
+                {% for y in b %}
+                    {% if loop.first %}
+                        <div class="main_h"><p><strong>{{y}}</strong></p></div>
+                    {% else %}
+                        <div class="content_main"> 
+                            <div class="content"><p>{{y}}</p></div>
+                        </div>   
+                    {% endif %}
+                {% endfor %}
+                
+                {% set intro = intro_list[loop.index0] %}
+
+
+                {% for i in intro %}
+                
+                    {% set a = i.split("\n\n") %}
+                    {% for z in a %}
+                        {% if loop.first %}
+                            <div class="main_h"><p><strong>{{z}}</strong></p></div>
+                        {% elif z|length < 100 %}
+                            <div class="content_main">    
+                                <div class="content"><p><i><u>{{z}}</u></i></p></div>
+                            </div>
+                        {% else %}
+                            <div class="content_main"> 
+                                <div class="content_2"><p>{{z}}</p></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                
+                
+                {% endfor %}
+                
+
+                {% set ans = ans_list[loop.index0] %}
+                {% for j in ans %}
+
+
+                    {% set a = j.split("\n\n") %}
+                    {% for z in a %}
+                        {% if loop.first %}
+                            <div class="main_h"><p><strong>{{z}}</strong></p></div>
+                        {% elif z|length < 100 %}
+                            <div class="content_main">
+                                <div class="content"><p><i><u>{{z}}</u></i></p></div>
+                            </div>
+                        {% else %}
+                            <div class="content_main">
+                                <div class="content_2"></div<p>{{z}}</p></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+
+                {% endfor %}
+
+                <h3>Fun Facts</h3>
+                {% set ff = fun_facts[loop.index0] %}
+                {% set split_ff=ff.split("\n") %}
+                {% for a in split_ff %}
+                    <p>{{a}}</p>
+                {% endfor %}
+
+                <h3></h3>
+                {% set quiz_temp = quiz[loop.index0] %}
+                {% set quiz_split=quiz_temp.split("\n") %}
+                {% for q in quiz_split %}
+                    {% if loop.first %}
+                        <p><strong>{{q}}</strong></p>
+                    {% else %}
+                        <p>{{q}}</p>
+                    {% endif %}
+                    
+                {% endfor %}
+
+            {% endfor %}   
+
+
+        </div>
+    </body>
+</html>

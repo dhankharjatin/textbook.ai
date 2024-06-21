@@ -1,0 +1,36 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+}
+#name{
+    /*border: 2px solid red;              /* */
+    text-align: center;
+}
+#index{
+    /*border: 2px solid red;              /* */
+    text-align: center;
+}
+#heading{
+    /*border: 2px solid red;              /* */
+    text-align: center;
+}
+.main_h{
+    /*border: 2px solid red;              /* */
+    font-size: larger;
+}
+.content_main{
+   /* border: 2px solid red;              /* */
+    display: grid;
+    justify-content: flex-end;
+}
+.content{
+    /*border: 2px solid red;              /* */
+    width: 95vw;
+
+}
+.content_2{
+    /*border: 2px solid red;              /* */
+    width: 90vw;
+
+}

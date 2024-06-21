@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(33, 33, 33);
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+
+}
+#name{
+    /*border: 2px solid red;              /* */
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+#instructions{
+    /*border: 2px solid red;              /* */
+    display: grid;
+    justify-content: center;
+
+}
+#steps_h{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    color: white;
+    text-align: center;
+    
+    
+}
+#box{
+    /*border: 2px solid white;                /* */
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    justify-content:space-around;
+    width: 80vw;
+    
+
+    
+}
+.img{
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 200px;
+    /*width: 200px;*/
+    margin: 5px;
+}
+
+.text{
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 100px;
+    /*width: 200px;*/
+    margin: 5px;
+}
+
+#input{
+    /*border: 2px solid red;              /* */
+    display: grid;
+    justify-content: center;
+}
+
+#input_h{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    text-align: center;
+    color: white;
+}
+
+#topic{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    display: grid;
+    justify-content: center;
+}
+#topic_input{
+    width: 600px;
+    height: 20px;
+    border: 2px solid rgb(159, 159, 159) ;
+    border-radius: 20px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+#control{
+    /*border: 2px solid rgb(255, 255, 255);              /* */
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    color: white;
+    width: 70vw;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.inp{
+    border: 2px solid rgb(159, 159, 159) ;
+    background-color: rgb(33, 33, 33);
+    border-radius: 20px;
+    width: 30px;
+    color: white;
+}
+#chap,#nos,#depth{
+    text-align: center;
+}
+#submit{
+    /*border: 2px solid rgb(255, 255, 255);               */
+    display: grid;
+    width: 70vw;
+    height: 30px;
+    justify-content: center;
+
+}
+button{
+    color: white;
+}

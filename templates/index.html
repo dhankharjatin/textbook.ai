@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbook.ai</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="inner">
+
+            <div id="name"><h1>TextBook.AI</h1></div>
+
+            <!--<div id="instructions">
+                <div id="steps_h">
+                    <h2>Steps To Generate</h2>
+                </div>
+
+                <div id="box">
+                    <div class="img">
+                        <p>lol</p>
+                    </div>
+                    <div class="img">
+                        <p>lol</p>
+                    </div>
+                    <div class="img">
+                        <p>lol</p>
+                    </div>
+                    <div class="text">
+                        <p>lol</p>
+                    </div>
+                    <div class="text">
+                        <p>lol</p>
+                    </div>
+                    <div class="text">
+                        <p>lol</p>
+                    </div>
+                </div>
+
+            </div>-->
+
+
+            <div id="input">   
+                
+                
+                <div id="input_h"><h2>Enter Book's topic</h2></div>
+
+                <form action="{{ url_for('book') }}" method="post">   
+                    <div id="topic">  
+
+                        
+                        <input type="text" name="topic" id="topic_input" >
+
+                    </div>
+
+                    <div id="control">
+                        
+                        <div id="chap">
+                            <label for="chap">no. of chapter</label>
+                            <input type="number" name="chap" class="inp">
+                        </div>
+
+                        <div id="nos">
+                            <label for="nos">Number of subtopics</label>
+                            <input type="number" name="nos" class="inp">
+                        </div>
+
+                        <div id="depth">
+                            <label for="depth">Depth</label>
+                            <input type="number" name="depth" class="inp">
+                        </div>
+
+                        
+
+                    </div>
+                    <div id="submit">
+                        <input type="submit" value="Generate" >
+                    </div>
+                </form>
+
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
